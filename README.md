@@ -30,6 +30,6 @@ A modern, responsive **Admin Dashboard** built with **React**. Includes features
 
 ```bash
 git clone https://github.com/Tushargarg09/Dashboard.git
-cd admin-dashboard
+cd dashboard
 npm install
 npm start
