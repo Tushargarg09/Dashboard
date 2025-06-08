@@ -1,0 +1,18 @@
+.sidebar {
+  width: 200px;
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}

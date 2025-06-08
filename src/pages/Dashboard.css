@@ -1,0 +1,40 @@
+.dashboard-page {
+  padding: 20px;
+}
+
+.stats-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.card {
+  flex: 1;
+  min-width: 200px;
+  background: var(--card-bg, #fff);
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #666;
+}
+
+.card p {
+  font-size: 24px;
+  margin-top: 8px;
+  color: #333;
+}
+
+.dashboard-charts {
+  margin-top: 40px;
+}
