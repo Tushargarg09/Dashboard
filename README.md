@@ -1,4 +1,4 @@
-# 🧩 React Admin Dashboard
+# React Admin Dashboard
 
 A modern, responsive **Admin Dashboard** built with **React**. Includes features like theme toggling (Dark/Light), charts, tables, Kanban board, and calendar integration.
 
