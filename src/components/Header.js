@@ -3,7 +3,8 @@ import React from 'react';
 function Header({ darkMode, setDarkMode }) {
   return (
     <header className="header">
-      <h1>Admin Dashboard</h1>
+      
+      <h1 style={{marginLeft:16}}>Admin Dashboard</h1>
       <button
         onClick={() => setDarkMode(prev => !prev)}
         style={{

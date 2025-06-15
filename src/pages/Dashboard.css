@@ -38,3 +38,25 @@
 .dashboard-charts {
   margin-top: 40px;
 }
+.recent-activity {
+  margin-top: 30px;
+  background: var(--card-bg, #fff);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+  color: #666;
+}
+.recent-activity:hover{
+  transform: translateY(-5px);
+}
+.recent-activity ul {
+  list-style: none;
+  padding: 0;
+}
+
+.recent-activity li {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #333;
+}

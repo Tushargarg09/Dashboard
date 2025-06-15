@@ -32,6 +32,15 @@ function Dashboard() {
           <p>3</p>
         </div>
       </div>
+      <div className="recent-activity">
+  <h3>Recent Activity</h3>
+  <ul>
+    <li>✅ Completed Kanban task</li>
+    <li>📅 Scheduled a new meeting</li>
+    <li>📈 User growth increased 10%</li>
+  </ul>
+</div>
+
 
       <div className="dashboard-charts">
         <h3>User Growth</h3>
@@ -40,7 +49,7 @@ function Dashboard() {
             <XAxis dataKey="name" />
             <YAxis />
             <Tooltip />
-            <Line type="monotone" dataKey="users" stroke="#8884d8" strokeWidth={2} />
+            <Line type="monotone" dataKey="users" stroke="#8884d8" strokeWidth={2} isAnimationActive={true} />
           </LineChart>
         </ResponsiveContainer>
       </div>

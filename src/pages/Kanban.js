@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+import './Kanban.css'; 
 
 const initialTasks = {
-  Todo: ['Task 1', 'Task 2'],
-  InProgress: ['Task 3'],
-  Done: ['Task 4'],
+  Todo: ['Design login page', 'Set up database'],
+  InProgress: ['Create Kanban UI'],
+  Done: ['Install dependencies'],
 };
 
 function Kanban() {
@@ -18,7 +19,7 @@ function Kanban() {
     const destList = [...tasks[destination.droppableId]];
     destList.splice(destination.index, 0, movedTask);
 
-    setTasks(prev => ({
+    setTasks((prev) => ({
       ...prev,
       [source.droppableId]: srcList,
       [destination.droppableId]: destList,
@@ -29,24 +30,25 @@ function Kanban() {
     <div className="page">
       <h2>Kanban Board</h2>
       <DragDropContext onDragEnd={onDragEnd}>
-        <div style={{ display: 'flex', gap: '20px' }}>
-          {Object.keys(tasks).map(column => (
+        <div className="kanban-board">
+          {Object.keys(tasks).map((column) => (
             <Droppable droppableId={column} key={column}>
               {(provided) => (
                 <div
+                  className="kanban-column"
                   {...provided.droppableProps}
                   ref={provided.innerRef}
-                  style={{ background: '#9e9e9e', padding: 10, width: 200 }}
                 >
                   <h4>{column}</h4>
                   {tasks[column].map((task, index) => (
                     <Draggable draggableId={task} index={index} key={task}>
                       {(provided) => (
                         <div
+                          className="kanban-card"
                           ref={provided.innerRef}
                           {...provided.draggableProps}
                           {...provided.dragHandleProps}
-                          style={{ background: '#fff',color: '#000', marginBottom: 8, padding: 8, ...provided.draggableProps.style }}
+                          style={{ ...provided.draggableProps.style }}
                         >
                           {task}
                         </div>

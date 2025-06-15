@@ -2,11 +2,18 @@
   display: flex;
   min-height: 100vh;
 }
+body {
+  font-family: 'Poppins', sans-serif;
+}
+* {
+  transition: background 0.3s ease, color 0.3s ease;
+}
 
 .main {
   flex: 1;
   padding: 20px;
   background: #f7f7f7;
+  margin-left: 240px;
 }
 
 .dark .main {
@@ -32,4 +39,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.dark .chart-card {
+  background: #2b2b2b;
+}
+
+.dark .charts-page h2 {
+  color: #f0f0f0;
 }
